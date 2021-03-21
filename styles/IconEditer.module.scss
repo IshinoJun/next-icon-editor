@@ -1,0 +1,89 @@
+.overlayBase {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  outline: none;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+  transition-property: background-color, opacity;
+}
+
+.overlayAfter {
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+}
+
+.overlayBefore {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+
+.contentBase {
+  position: relative;
+  width: 0%;
+  height: 0%;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 5px;
+  outline: none;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+  transition-property: background-color, width, height;
+}
+
+.contentAfter {
+  width: 350px;
+  height: 450px;
+
+  background-color: #FFF;
+}
+
+.contentBefore {
+  width: 0%;
+  height: 0%;
+  background-color: transparent;
+}
+
+.iconUploader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .sliderWarp {
+    padding-top: 10px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+
+  button {
+    height: 48px;
+    margin: 2px;
+    overflow: hidden;
+    border: 0;
+    background-color: #FFF;
+    cursor: pointer;
+  }
+}
